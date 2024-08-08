@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block cs %}
+<link rel="stylesheet" href="{% static 'log.css' %}?{% now 'U' %}">
+<link rel="stylesheet" href="../apps/static/booksCon.css">
+{% endblock %}
+{% block cont%}
+<div class="books container">
+    <div class="row">
+        <div class="col-md-12 mt-4">
+            <div class="text-center">
+                <h2 style="text-shadow: 2px 2px 10px rgba(0,0,0,0.5);"><b>Books</b></h2>
+            </div>
+
+            <div class="card-columns mt-5">
+                <div class="card bookdes" style="background-color:rgba(0,0,0,0);max-width:13rem;">
+                    <a href="{% url 'bookread' %}"><img src="{% static 'txtimg.jpg' %}" class="crdimg"></a>
+                    <h5 class="mt-4" style="text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">Mathematics</h5>
+                </div>
+
+                <div class="card bookdes" style="background-color:rgba(0,0,0,0);max-width:13rem;">
+                    <a href="{% url 'bookread2' %}"><img src="{% static '11th.jpg' %}" class="crdimg"></a>
+                    <h5 class="mt-4" style="text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">Information & Technology</h5>
+                </div>
+
+                <div class="card bookdes" style="background-color:rgba(0,0,0,0);max-width:13rem;">
+                    <a href="{% url 'bookread3' %}"><img src="{% static 'sf.jpg' %}" class="crdimg"></a>
+                    <h5 class="mt-4" style="text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">Software Engineering</h5>
+                </div>
+
+                <div class="card bookdes" style="background-color:rgba(0,0,0,0);max-width:13rem;">
+                    <a href="{% url 'bookread4' %}"><img src="{% static 'py.jpg' %}" class="crdimg"></a>
+                    <h5 class="mt-4" style="text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">Python Programming Language</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

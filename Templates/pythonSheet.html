@@ -1,0 +1,155 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block cont%}
+<div class="sheet-index">
+    <button id="javaBtn" class="sheet-btn">Java</button>    
+    <button id="pythonBtn" class="sheet-btn">Python</button>
+    <button class="sheet-btn">PHP</button>
+    <button class="sheet-btn">Javascript</button>
+    <button class="sheet-btn">SQL</button>
+    <button class="sheet-btn">Jquery</button>
+    <button class="sheet-btn">Node.js</button>
+    <button class="sheet-btn">Hibernate</button>
+    <button class="sheet-btn">CSS</button>
+    <button class="sheet-btn">HTML</button>
+    <button class="sheet-btn">GIT</button>
+</div>
+
+
+<div class="cheatContainer mt-5 container-fluid">
+    <div class="python">
+        <h4>Print Statement</h4>
+        <pre data-src="myfile.py" data-download-link data-download-link-label="Download this file"
+             style="border:none; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 8px 20px 0 rgba(0, 0, 0, 0.19);">
+            <code class="language-python">print("Hello, World!")</code>
+        </pre>
+    </div>
+
+    <h5 class="mt-5">Variables and Data Types</h5>
+
+    <div class="python mt-5">
+        <h4>Data Types in Python</h4>
+        <pre data-src="myfile.py" data-download-link data-download-link-label="Download this file"
+             style="border:none; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 8px 20px 0 rgba(0, 0, 0, 0.19);">
+            <code class="language-python"># Integer
+num = 10
+
+# Float
+float_num = 20.45
+
+# String
+text = "Hello, Python"
+            </code>
+        </pre>
+    </div>
+
+    <h5 class="mt-5">Conditions in Python</h5>
+
+    <div class="python mt-5">
+        <h4>Conditional Statements</h4>
+        <pre data-src="myfile.py" data-download-link data-download-link-label="Download this file"
+             style="border:none; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 8px 20px 0 rgba(0, 0, 0, 0.19);">
+            <code class="language-python">if x > 0:
+    print("Positive")
+elif x < 0:
+    print("Negative")
+else:
+    print("Zero")
+            </code>
+        </pre>
+    </div>
+
+    <h5 class="mt-5">Loops in Python</h5>
+
+    <div class="python mt-5">
+        <h4>For Loop</h4>
+        <pre data-src="myfile.py" data-download-link data-download-link-label="Download this file"
+             style="border:none; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 8px 20px 0 rgba(0, 0, 0, 0.19);">
+            <code class="language-python">for i in range(5):
+    print(i)
+            </code>
+        </pre>
+    </div>
+
+    <div class="python mt-5">
+        <h4>While Loop</h4>
+        <pre data-src="myfile.py" data-download-link data-download-link-label="Download this file"
+             style="border:none; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 8px 20px 0 rgba(0, 0, 0, 0.19);">
+            <code class="language-python">count = 0
+while count < 5:
+    print(count)
+    count += 1
+            </code>
+        </pre>
+    </div>
+
+
+    <!-- ... (previous code sections) ... -->
+
+<h5 class="mt-5">Functions in Python</h5>
+
+<div class="python mt-5">
+    <h4>Defining a Function</h4>
+    <pre data-src="myfile.py" data-download-link data-download-link-label="Download this file"
+         style="border:none; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 8px 20px 0 rgba(0, 0, 0, 0.19);">
+        <code class="language-python">def greet(name):
+    print("Hello, " + name)
+
+# Call the function
+greet("John")
+        </code>
+    </pre>
+</div>
+
+<h5 class="mt-5">Lists and Dictionaries in Python</h5>
+
+<div class="python mt-5">
+    <h4>Lists</h4>
+    <pre data-src="myfile.py" data-download-link data-download-link-label="Download this file"
+         style="border:none; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 8px 20px 0 rgba(0, 0, 0, 0.19);">
+        <code class="language-python"># Create a list
+my_list = [1, 2, 3, 4, 5]
+
+# Access elements
+print(my_list[0])
+
+# Modify elements
+my_list[1] = 10
+
+# Add elements
+my_list.append(6)
+        </code>
+    </pre>
+</div>
+
+<div class="python mt-5">
+    <h4>Dictionaries</h4>
+    <pre data-src="myfile.py" data-download-link data-download-link-label="Download this file"
+         style="border:none; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) inset, 0 8px 20px 0 rgba(0, 0, 0, 0.19);">
+        <code class="language-python"># Create a dictionary
+my_dict = {'name': 'John', 'age': 25, 'city': 'New York'}
+
+# Access values
+print(my_dict['name'])
+
+# Modify values
+my_dict['age'] = 26
+
+# Add new key-value pair
+my_dict['gender'] = 'Male'
+        </code>
+    </pre>
+</div>
+
+<!-- ... (more Python code sections) ... -->
+
+    <!-- Add more Python code sections as needed -->
+
+</div>
+
+{% endblock %}
+{% block scrip %}
+
+    <script src="{% static 'prism.js' %}"></script>
+
+    {% endblock %}
